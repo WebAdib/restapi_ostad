@@ -14,12 +14,20 @@ class _DummyUserState extends State<DummyUser> {
       appBar: AppBar(
         title: Text('Dummy User'),
       ),
-      body: Center(
-        child: Text('This is a dummy user.'),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.add),
+      body: ListView.builder(
+        itemCount: 10,
+        itemBuilder: (context, index) {
+          return Card(
+            child: ListTile(
+              leading: CircleAvatar(
+                child: Icon(Icons.person),
+                backgroundColor: Colors.blue.shade300,
+              ),
+              title: Text('User $index'),
+              subtitle: Text('This is a dummy user'),
+            ),
+          );
+        },
       ),
     );
   }
