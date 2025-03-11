@@ -52,6 +52,7 @@ class _DummyUserState extends State<DummyUser> {
                   Text('Email: ${users[index]['email']}'),
                   Text('Phone: ${users[index]['phone']}'),
                   Text('Website: ${users[index]['website']}'),
+                  Text('Address: ${users[index]['address']}'),
                 ],
               ),
             ),
